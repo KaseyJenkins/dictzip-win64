@@ -1,4 +1,4 @@
-## Dictzip for Windows
+## `dictzip` for Windows
 
 This project provides `dictzip` utility for Windows 10, built with [MinGW-w64 9.0.0](https://github.com/brechtsanders/winlibs_mingw/releases/tag/11.2.0-12.0.1-9.0.0-r1).
 It requires no additional dependencies.
