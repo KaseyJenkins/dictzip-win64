@@ -22,6 +22,7 @@
 
 #include "zlib.h"
 #include <stdio.h>
+#include <stddef.h>
 
 #define PRINTF(flag, arg)  if (dbg_test(flag)) { log_info arg; }
 
