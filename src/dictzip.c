@@ -18,12 +18,6 @@
  * 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#ifndef _TRUNCATE
-#define _TRUNCATE ((size_t)-1)
-#endif
-
-
-
 
 #include "dictzip.h"
 #include "data.h"
@@ -446,48 +440,19 @@ int main(int argc, char **argv) {
                             "cdfhklLe:E:s:S:tvVD:p:P:",
                             longopts, NULL)) != EOF)
         switch (c) {
-            case 'd':
-                ++decompressFlag;
-                break;
-            case 'f':
-                ++forceFlag;
-                break;
-            case 'k':
-                ++keepFlag;
-                break;
-            case 'l':
-                ++listFlag;
-                break;
-            case 'L':
-                license();
-                exit(1);
-                break;
-            case 'c':
-                ++stdoutFlag;
-                break;
-            case 't':
-                ++testFlag;
-                break;
-            case 'v':
-                ++verboseFlag;
-                break;
-            case 'V':
-                banner();
-                exit(1);
-                break;
-            case 's':
-                ++decompressFlag;
-                clStart = strtoul(optarg, NULL, 10);
-                break;
-            case 'e':
-                ++decompressFlag;
-                clSize = strtoul(optarg, NULL, 10);
-                break;
+            case 'd': ++decompressFlag;                                      break;
+            case 'f': ++forceFlag;                                           break;
+            case 'k': ++keepFlag;                                            break;
+            case 'l': ++listFlag;                                            break;
+            case 'L': license(); exit( 1 );                                  break;
+            case 'c': ++stdoutFlag;                                          break;
+            case 't': ++testFlag;                                            break;
+            case 'v': ++verboseFlag;                                         break;
+            case 'V': banner(); exit( 1 );                                   break;
+            case 's': ++decompressFlag; clStart = strtoul( optarg, NULL, 10 ); break;
+            case 'e': ++decompressFlag; clSize  = strtoul( optarg, NULL, 10 ); break;
             default:
-            case 'h':
-                help();
-                exit(1);
-                break;
+            case 'h': help(); exit(1);                                 break;
         }
 
     if (testFlag) ++listFlag;
