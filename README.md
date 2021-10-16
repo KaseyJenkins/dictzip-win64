@@ -3,7 +3,7 @@
 This project provides `Dictzip` utility for Windows, built with Visual Studio 2012.
 It requires no additional dependencies when executed, just a simple exe file.
 
-The sources are based on the official [dictd](http://sourceforge.net/projects/dict/) v1.12.1,
+The sources are based on the official [dictd](http://sourceforge.net/projects/dict/) v1.13.0,
 with minor tweaks to be able to build with MSVC++ on Windows.
 
 ### How to build
