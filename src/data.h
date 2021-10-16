@@ -20,9 +20,6 @@
 #ifndef _DATA_H_
 #define _DATA_H_
 
-#ifndef DICTZIP_WIN32
-#include "dictP.h"
-#endif
 #include "defs.h"
 
 /* initialize .data file */
@@ -37,21 +34,11 @@ extern int      dict_data_zip(
    const char *inFilename, const char *outFilename,
    const char *preFilter, const char *postFilter );
 
-extern char *dict_data_obtain (
-   const dictDatabase *db,
-   const dictWord *dw);
-
 extern char *dict_data_read_ (
    dictData *data,
    unsigned long start, unsigned long end,
    const char *preFilter,
    const char *postFilter );
-
-#ifndef DICTZIP_WIN32
-extern int   dict_data_filter(
-   char *buffer, int *len, int maxLength,
-   const char *filter );
-#endif
 
 extern int        mmap_mode;
 

@@ -22,22 +22,15 @@
 #ifndef _DICTZIP_H_
 #define _DICTZIP_H_
 
-#include "maa.h"
+#include "defs.h"
 #include "zlib.h"
-#ifndef DICTZIP_WIN32
-#include "dictd.h"
-#endif
 
 				/* End of configurable things */
 
 #define BUFFERSIZE 10240
 #define DBG_VERBOSE     (0<<30|1<< 0) /* Verbose                           */
-#define DBG_ZIP         (0<<30|1<< 1) /* Zip                               */
 #define DBG_UNZIP       (0<<30|1<< 2) /* Unzip                             */
-#define DBG_SEARCH      (0<<30|1<< 3) /* Search                            */
-#define DBG_SCAN        (0<<30|1<< 4) /* Config file scan                  */
-#define DBG_PARSE       (0<<30|1<< 5) /* Config file parse                 */
-#define DBG_INIT        (0<<30|1<< 6) /* Database initialization           */
+
 
 #define HEADER_CRC 0		/* Conflicts with gzip 1.2.4               */
 
@@ -77,21 +70,7 @@
 #define GZ_FAST          4	/* Fasted compression                      */
 
 				/* These are from rfc1952                  */
-#define GZ_OS_FAT        0	/* FAT filesystem (MS-DOS, OS/2, NT/Win32) */
-#define GZ_OS_AMIGA      1	/* Amiga                                   */
-#define GZ_OS_VMS        2	/* VMS (or OpenVMS)                        */
 #define GZ_OS_UNIX       3      /* Unix                                    */
-#define GZ_OS_VMCMS      4      /* VM/CMS                                  */
-#define GZ_OS_ATARI      5      /* Atari TOS                               */
-#define GZ_OS_HPFS       6      /* HPFS filesystem (OS/2, NT)              */
-#define GZ_OS_MAC        7      /* Macintosh                               */
-#define GZ_OS_Z          8      /* Z-System                                */
-#define GZ_OS_CPM        9      /* CP/M                                    */
-#define GZ_OS_TOPS20    10      /* TOPS-20                                 */
-#define GZ_OS_NTFS      11      /* NTFS filesystem (NT)                    */
-#define GZ_OS_QDOS      12      /* QDOS                                    */
-#define GZ_OS_ACORN     13      /* Acorn RISCOS                            */
-#define GZ_OS_UNKNOWN  255      /* unknown                                 */
 
 #define GZ_RND_S1       'R'	/* First magic for random access format    */
 #define GZ_RND_S2       'A'	/* Second magic for random access format   */
@@ -117,6 +96,5 @@
 #define DICT_TEXT       1
 #define DICT_GZIP       2
 #define DICT_DZIP       3
-
 
 #endif
