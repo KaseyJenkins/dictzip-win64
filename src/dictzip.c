@@ -18,6 +18,13 @@
  * 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
+#ifndef _TRUNCATE
+#define _TRUNCATE ((size_t)-1)
+#endif
+
+
+
+
 #include "dictzip.h"
 #include "data.h"
 
