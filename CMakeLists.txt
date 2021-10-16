@@ -24,7 +24,6 @@ add_compile_definitions(
         DICT_VERSION="1.13.0-Win64-1.0.0"
 )
 
-
 target_include_directories(dictzip
         PRIVATE zlib
         )
