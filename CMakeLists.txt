@@ -21,7 +21,7 @@ add_executable(dictzip
         )
 
 add_compile_definitions(
-        DICT_VERSION="1.12.1-Win64-1.0"
+        DICT_VERSION="1.13.0-Win64-1.0.0"
 )
 
 
